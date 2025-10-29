@@ -1,0 +1,204 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general style to body */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.5;
+}
+
+/* header style */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1.2rem 4vw;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 0.2rem solid #1e293b;
+}
+
+/* class brand (it goes with a dot) */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* here using the class brand logo we adjust the logo to where we want it */
+.brand-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, #1a73e8, #ffb703);
+    color: #ffffff;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.brand-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* id navigation menu */
+#navigation-menu {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+/* style of "a" elements inside the navigation menu */
+#navigation-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+/* when mouse hovers on an "a" element on the menu it changes color to yellow */
+
+#navigation-menu a:hover {
+    color: #ffb703;
+}
+
+/* here i define some default options for the menu toggle (it's disabled by default)*/
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: auto;
+}
+
+/* same here, when the user in a small screen puts 
+its cursor on the menu toggler, it will turn yellow, 
+so the UX is more friendly*/
+
+#menu-toggle:hover {
+    color: #ffb703;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+/* Small devices (phones, tablets up to 768px) */
+@media only screen and (max-width: 768px) {
+    #header {
+        flex-direction: row;
+        padding: 1rem 5vw;
+    }
+
+    #navigation-menu {
+        display: none;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background-color: #0f172a;
+        border-top: 0.1rem solid #1e293b;
+        padding: 2rem 0;
+        margin-left: auto;
+    }
+
+    #navigation-menu.active {
+        display: flex;
+    }
+
+    #navigation-menu a {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .brand-logo {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .brand-title {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #navigation-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        padding: 0;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #navigation-menu a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #header {
+        padding: 1.5rem 8vw;
+    }
+
+    .brand-title {
+        font-size: 1.8rem;
+    }
+
+    #navigation-menu a {
+        font-size: 1.15rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #header {
+        padding: 2rem 10vw;
+    }
+
+    .brand-logo {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.6rem;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    #navigation-menu a {
+        font-size: 1.2rem;
+    }
+}

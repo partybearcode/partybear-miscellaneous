@@ -1,0 +1,112 @@
+/* Main content */
+#content {
+  padding: 4vh 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.brainrot-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.brainrot-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  flex: 1 1 22rem;
+  max-width: 24rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brainrot-card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.brainrot-image {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.card-body i {
+  font-size: 1.8rem;
+  color: #1a73e8;
+  margin-bottom: 0.6rem;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+/* Small devices (phones, up to 768px) */
+@media only screen and (max-width: 768px) {
+  .brainrot-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brainrot-card {
+    width: 85vw;
+  }
+
+  .brainrot-image {
+    height: 12rem;
+  }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .brainrot-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+
+  .brainrot-image {
+    height: 13rem;
+  }
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) {
+  .brainrot-card {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+
+  .brainrot-image {
+    height: 14rem;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .brainrot-card {
+    flex: 1 1 calc(25% - 2rem);
+  }
+
+  .brainrot-image {
+    height: 16rem;
+  }
+}

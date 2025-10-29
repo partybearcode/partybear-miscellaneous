@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predicciones | PartyBear's Miscellaneous</title>
+  <link rel="icon" type="img/x-icon" href="/img/predictions-favicon.png">
+
+  <!-- link to css stylesheet -->
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/predictions.css">
+
+  <!-- library for the icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="brand">
+      <div class="brand-logo">PB</div>
+      <h1 class="brand-title">PartyBear's Miscellaneous</h1>
+    </div>
+
+    <nav id="navigation-menu" aria-hidden="true" aria-label="main-menu">
+      <a href="index.html">Inicio</a>
+      <a href="predictions.html">Predicciones</a>
+      <a href="brainrots.html">Brainrots</a>
+    </nav>
+
+    <button id="menu-toggle" aria-expanded="false" aria-controls="navigation-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div id="menu-overlay" aria-hidden="true"></div>
+  </header>
+  <div id="container">
+
+    <main id="content">
+      <section id="predictions">
+        <h2>Próximos Partidos</h2>
+        <div class="matches-container">
+          <!-- Here i put the atributes in upper and lower case like if it was content, 
+           because this is gonna show to the user via JS. -->
+          <div class="match-card" data-team1="Real Madrid" data-team2="Barcelona">
+            <img src="img/madrid-barcelona.webp" alt="elclasico" class="match-img">
+            <div class="match-info">
+              <h3>Real Madrid vs Barcelona</h3>
+              <p>Champions League • 26 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Atletico Madrid" data-team2="Sevilla">
+            <img src="img/atleti-sevilla.jpg" alt="atletisevilla" class="match-img">
+            <div class="match-info">
+              <h3>Atletico Madrid vs Sevilla</h3>
+              <p>LaLiga • 27 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Manchester City" data-team2="Bayern Munich">
+            <img src="img/city-bayern.jpg" alt="citybayern" class="match-img">
+            <div class="match-info">
+              <h3>Manchester City vs Bayern Munich</h3>
+              <p>Champions League • 28 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Liverpool" data-team2="Arsenal">
+            <img src="img/liverpool-arsenal.jpg" alt="liverpoolarsenal" class="match-img">
+            <div class="match-info">
+              <h3>Liverpool vs Arsenal</h3>
+              <p>Premier League • 29 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Juventus" data-team2="Inter">
+            <img src="img/juve-inter.webp" alt="juveinter" class="match-img">
+            <div class="match-info">
+              <h3>Juventus vs Inter</h3>
+              <p>Serie A • 30 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="AC Milan" data-team2="Napoli">
+            <img src="img/milan-napoli.webp" alt="milannapoli" class="match-img">
+            <div class="match-info">
+              <h3>AC Milan vs Napoli</h3>
+              <p>Serie A • 31 Oct 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="PSG" data-team2="Lyon">
+            <img src="img/psg-lyon.webp" alt="psglyon" class="match-img">
+            <div class="match-info">
+              <h3>PSG vs Lyon</h3>
+              <p>Ligue 1 • 01 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Marseille" data-team2="Monaco">
+            <img src="img/marseille-monaco.jpg" alt="marseillemonaco" class="match-img">
+            <div class="match-info">
+              <h3>Marseille vs Monaco</h3>
+              <p>Ligue 1 • 02 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Borussia Dortmund" data-team2="RB Leipzig">
+            <img src="img/dortmund-leipzig.png" alt="dortmundleipzig" class="match-img">
+            <div class="match-info">
+              <h3>Borussia Dortmund vs RB Leipzig</h3>
+              <p>Bundesliga • 03 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Schalke" data-team2="Bayer Leverkusen">
+            <img src="img/schalke-bayer.jpg" alt="schalkeleverkusen" class="match-img">
+            <div class="match-info">
+              <h3>Schalke vs Bayer Leverkusen</h3>
+              <p>Bundesliga • 04 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Chelsea" data-team2="Tottenham">
+            <img src="img/chelsea-tottenham.png" alt="chelseatottenham" class="match-img">
+            <div class="match-info">
+              <h3>Chelsea vs Tottenham</h3>
+              <p>Premier League • 05 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Everton" data-team2="West Ham">
+            <img src="img/everton-westham.jpg" alt="evertonwestham" class="match-img">
+            <div class="match-info">
+              <h3>Everton vs West Ham</h3>
+              <p>Premier League • 06 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Real Sociedad" data-team2="Valencia">
+            <img src="img/realsociedad-valencia.jpg" alt="realsociedadvalencia" class="match-img">
+            <div class="match-info">
+              <h3>Real Sociedad vs Valencia</h3>
+              <p>LaLiga • 07 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Villareal" data-team2="Real Betis">
+            <img src="img/villareal-betis.jpg" alt="villarealbetis" class="match-img">
+            <div class="match-info">
+              <h3>Villareal vs Real Betis</h3>
+              <p>LaLiga • 08 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Porto" data-team2="Benfica">
+            <img src="img/porto-benfica.jpg" alt="portobenfica" class="match-img">
+            <div class="match-info">
+              <h3>Porto vs Benfica</h3>
+              <p>Primeira Liga • 09 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Sporting CP" data-team2="Braga">
+            <img src="img/sportingcp-braga.jpg" alt="sportingcpbraga" class="match-img">
+            <div class="match-info">
+              <h3>Sporting CP vs Braga</h3>
+              <p>Primeira Liga • 10 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Celta Vigo" data-team2="Osasuna">
+            <img src="img/celta-osasuna.webp" alt="celtaosasuna" class="match-img">
+            <div class="match-info">
+              <h3>Celta Vigo vs Osasuna</h3>
+              <p>LaLiga • 11 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Boca Juniors" data-team2="River Plate">
+            <img src="img/boca-river.jpg" alt="bocariver" class="match-img">
+            <div class="match-info">
+              <h3>Boca Juniors vs River Plate</h3>
+              <p>Copa Libertadores • 12 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Flamengo" data-team2="Palmeiras">
+            <img src="img/flamengo-palmeiras.webp" alt="flamengopalmeiras" class="match-img">
+            <div class="match-info">
+              <h3>Flamengo vs Palmeiras</h3>
+              <p>Copa Libertadores • 13 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="LA Galaxy" data-team2="Seattle Sounders">
+            <img src="img/lagalaxy-seattle.jpg" alt="lagalaxyseattle" class="match-img">
+            <div class="match-info">
+              <h3>LA Galaxy vs Seattle Sounders</h3>
+              <p>MLS • 14 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="New York City" data-team2="Atlanta United">
+            <img src="img/newyork-atalantautd.jpg" alt="newyorkatalantautd" class="match-img">
+            <div class="match-info">
+              <h3>New York City vs Atlanta United</h3>
+              <p>MLS • 15 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Cork City" data-team2="Shamrock Rovers">
+            <img src="img/cork-shamrock.jpg" alt="corkshamrock" class="match-img">
+            <div class="match-info">
+              <h3>Cork City vs Shamrock Rovers</h3>
+              <p>League of Ireland • 16 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Ajax" data-team2="Feyenoord">
+            <img src="img/ajax-feyenoord.jpg" alt="ajaxfeyenoord" class="match-img">
+            <div class="match-info">
+              <h3>Ajax vs Feyenoord</h3>
+              <p>Eredivisie • 17 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+
+          <div class="match-card" data-team1="Celtic" data-team2="Rangers">
+            <img src="img/celtic-rangers.jpg" alt="celticrangers" class="match-img">
+            <div class="match-info">
+              <h3>Celtic vs Rangers</h3>
+              <p>Scottish Premiership • 18 Nov 2025</p>
+              <button class="predict-btn">Predecir Resultado</button>
+              <p class="result"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 PartyBear's Miscellaneous. Todos los derechos reservados.</p>
+
+      <div class="footer-logos">
+        <img src="img/six-seven-no-bg.webp" alt="six-seven" class="footer-logo">
+        <img src="img/ucl-footer.webp" alt="ucl-ball" class="footer-logo">
+        <img src="img/cup-footer.png" alt="football-cup" class="footer-logo">
+      </div>
+
+      <nav class="footer-links">
+        <a href="#privacy-policy">Política de privacidad</a>
+        <a href="https://github.com/partybearcode" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+  <script src="js/predictions.js"></script>
+  <script src="js/menu.js"></script>
+
+</body>
+
+</html>

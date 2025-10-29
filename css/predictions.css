@@ -1,0 +1,89 @@
+.matches-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.match-card {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.match-img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.match-info {
+  padding: 1rem;
+}
+
+.predict-btn {
+  margin-top: 0.8rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.predict-btn:hover {
+  background-color: #155bb5;
+}
+
+.result {
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #0f172a;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.result-visible {
+  transform: translateY(-0.25rem);
+  color: #1a73e8;
+}
+
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+  .match-card {
+    width: 90%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .match-card {
+    width: 80%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .match-card {
+    width: 45%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .match-card {
+    width: 30%;
+  }
+}
