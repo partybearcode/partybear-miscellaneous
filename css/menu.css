@@ -1,204 +1,389 @@
 /* universal selector */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* general style to body */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #334155;
-    line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.5;
 }
 
 /* header style */
 #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0f172a;
-    color: #ffffff;
-    padding: 1.2rem 4vw;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 0.2rem solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 1.2rem 4vw;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 0.2rem solid #1e293b;
 }
 
-/* class brand (it goes with a dot) */
+/* class brand */
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-/* here using the class brand logo we adjust the logo to where we want it */
+/* brand logo */
 .brand-logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    background: linear-gradient(135deg, #1a73e8, #ffb703);
-    color: #ffffff;
-    border-radius: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, #1a73e8, #ffb703);
+  color: #ffffff;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
 
 .brand-title {
-    font-size: 1.6rem;
-    font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-/* id navigation menu */
+/* navigation menu */
 #navigation-menu {
-    display: flex;
-    gap: 2rem;
-    margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+  flex-wrap: nowrap;
 }
 
-/* style of "a" elements inside the navigation menu */
+/* menu links */
 #navigation-menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  white-space: nowrap;
 }
-
-/* when mouse hovers on an "a" element on the menu it changes color to yellow */
 
 #navigation-menu a:hover {
-    color: #ffb703;
+  color: #ffb703;
 }
 
-/* here i define some default options for the menu toggle (it's disabled by default)*/
+/* menu toggle button */
 #menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-left: auto;
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
 }
-
-/* same here, when the user in a small screen puts 
-its cursor on the menu toggler, it will turn yellow, 
-so the UX is more friendly*/
 
 #menu-toggle:hover {
+  color: #ffb703;
+}
+
+/* ----------------------*/
+/* MEDIA QUERIES MENU    */
+/* ------------------ */
+
+/* 1. Mobile (<=640px) */
+@media only screen and (max-width: 640px) {
+  #header {
+    flex-direction: row;
+    padding: 0.8rem 4vw;
+    min-height: auto;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-logo {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1rem;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  #menu-toggle {
+    display: block;
+    margin-left: auto;
+    z-index: 1002;
+  }
+
+  #navigation-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 75vw;
+    height: 100vh;
+    background-color: #0f172a;
+    padding: 5rem 0 2rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    visibility: hidden;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  #navigation-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  #navigation-menu a {
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #navigation-menu a:hover {
+    background-color: #1e293b;
     color: #ffb703;
+  }
+
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+  }
+
+  #menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-/* ------------- */
-/* MEDIA QUERIES */
-/* ------------- */
+/* 2. Small Tablets (641px - 768px) */
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+  #header {
+    padding: 1rem 4vw;
+  }
 
-/* Small devices (phones, tablets up to 768px) */
-@media only screen and (max-width: 768px) {
-    #header {
-        flex-direction: row;
-        padding: 1rem 5vw;
-    }
+  .brand-logo {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
 
-    #navigation-menu {
-        display: none;
-        position: absolute;
-        top: 10vh;
-        left: 0;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-        background-color: #0f172a;
-        border-top: 0.1rem solid #1e293b;
-        padding: 2rem 0;
-        margin-left: auto;
-    }
+  .brand-title {
+    font-size: 1.3rem;
+  }
 
-    #navigation-menu.active {
-        display: flex;
-    }
+  #menu-toggle {
+    display: block;
+    margin-left: auto;
+    z-index: 1002;
+  }
 
-    #navigation-menu a {
-        font-size: 1.3rem;
-        padding: 1rem 0;
-        width: 100%;
-        text-align: center;
-    }
+  #navigation-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60vw;
+    height: 100vh;
+    background-color: #0f172a;
+    padding: 5rem 0 2rem;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    visibility: hidden;
+    gap: 0;
+    margin-left: 0;
+  }
 
-    #menu-toggle {
-        display: block;
-    }
+  #navigation-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+  }
 
-    .brand-logo {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.1rem;
-    }
+  #navigation-menu a {
+    font-size: 1.05rem;
+    padding: 1rem 1.3rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
+  }
 
-    .brand-title {
-        font-size: 1.3rem;
-    }
+  #menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+  }
+
+  #menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
+/* 3. Large Tablets (769px - 991px) */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  #header {
+    padding: 1.1rem 5vw;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #navigation-menu {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        background: none;
-        width: auto;
-        padding: 0;
-    }
+  .brand-logo {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+  }
 
-    #menu-toggle {
-        display: none;
-    }
+  .brand-title {
+    font-size: 1.4rem;
+  }
 
-    #navigation-menu a {
-        font-size: 1.1rem;
-    }
+  #menu-toggle {
+    display: none;
+  }
+
+  #navigation-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    height: auto;
+    transform: none;
+    visibility: visible;
+    gap: 1.2rem;
+    margin-left: auto;
+  }
+
+  #navigation-menu a {
+    font-size: 0.95rem;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+  }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    #header {
-        padding: 1.5rem 8vw;
-    }
+/* 4. Desktop (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #header {
+    padding: 1.3rem 6vw;
+  }
 
-    .brand-title {
-        font-size: 1.8rem;
-    }
+  .brand-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+  }
 
-    #navigation-menu a {
-        font-size: 1.15rem;
-    }
+  .brand-title {
+    font-size: 1.6rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #navigation-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    height: auto;
+    transform: none;
+    visibility: visible;
+    gap: 1.5rem;
+    margin-left: auto;
+  }
+
+  #navigation-menu a {
+    font-size: 1rem;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* 5. Large Desktops (>=1200px) */
 @media only screen and (min-width: 1200px) {
-    #header {
-        padding: 2rem 10vw;
-    }
+  #header {
+    padding: 1.5rem 8vw;
+  }
 
-    .brand-logo {
-        width: 4rem;
-        height: 4rem;
-        font-size: 1.6rem;
-    }
+  .brand-logo {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.6rem;
+  }
 
-    .brand-title {
-        font-size: 2rem;
-    }
+  .brand-title {
+    font-size: 1.8rem;
+  }
 
-    #navigation-menu a {
-        font-size: 1.2rem;
-    }
+  #menu-toggle {
+    display: none;
+  }
+
+  #navigation-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    height: auto;
+    transform: none;
+    visibility: visible;
+    gap: 2rem;
+    margin-left: auto;
+  }
+
+  #navigation-menu a {
+    font-size: 1.1rem;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+  }
 }

@@ -1,0 +1,126 @@
+.form-section {
+  padding: 1.2rem;
+  min-height: auto;
+}
+.list-section {
+  padding: 1.2rem;
+}
+
+/* form controls visuals */
+#match-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form-row input[type="text"],
+.form-row input[type="datetime-local"],
+.form-row input[type="url"] {
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.45rem;
+  border: 1px solid #e6eefc;
+  font-size: 0.95rem;
+}
+
+/* errors */
+.form-errors { 
+  color: #b91c1c; 
+  min-height: 1.2rem; 
+}
+
+/* matches-list cards */
+.matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.match-card {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px rgba(12,18,24,0.04);
+}
+.match-thumb {
+  width: 110px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.match-thumb img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+.match-meta { 
+  flex: 1;
+}
+.match-meta h4 { 
+  margin-bottom: 0.2rem; 
+  font-size: 
+  1rem; }
+.match-meta p { 
+  margin: 0; 
+  color: #475569; 
+  font-size: 0.9rem; 
+}
+
+.match-actions { 
+  display:flex; 
+  gap:0.5rem; 
+}
+
+.icon-btn { 
+  background:transparent; 
+  border:none; 
+  cursor:pointer; 
+  font-size:1rem; 
+  padding:0.35rem; 
+  border-radius:0.4rem; 
+}
+
+.icon-btn.edit { 
+  color:#1a73e8; 
+}
+
+.icon-btn.delete { 
+  color:#b91c1c;
+}
+
+#save-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  #content { 
+    padding: 2vh 5vw; 
+    flex-direction: column; 
+    gap: 1.2rem;
+   }
+  .match-thumb { 
+    width: 90px; 
+    height: 60px;
+   }
+}

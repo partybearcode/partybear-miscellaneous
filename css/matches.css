@@ -1,0 +1,128 @@
+
+/* container grid layout (compatible with .matches-grid and .matches-list) */
+.matches-grid,
+.matches-list {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 columna */
+  gap: 0.9rem;
+  padding: 0.6rem;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* card (general) */
+.match-card {
+  background: #ffffff;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px rgba(12, 18, 24, 0.04);
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* thumbnail (mobile full-width) */
+.match-thumb {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.match-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* info area (used by matches-read.js: .match-info) */
+.match-info,
+.match-meta {
+  flex: 1;
+}
+
+.match-info h3,
+.match-meta h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.match-info p,
+.match-meta p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+/* Actions & buttons */
+.match-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.35rem;
+  border-radius: 0.4rem;
+}
+
+.icon-btn.edit { color: #1a73e8; }
+.icon-btn.delete { color: #b91c1c; }
+
+/* 1. big phones & tablet (2 columns), quick reminder i don't need
+the first breakpoint because it is already defined and now i am 
+adapting this to larger devices */
+@media (min-width: 768px) {
+  .matches-grid,
+  .matches-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .match-card {
+    flex-direction: row; /* thumb left, info right */
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.85rem;
+  }
+
+  .match-thumb {
+    width: 160px;
+    height: 100px;
+    border-radius: 0.5rem;
+  }
+}
+
+/* 2. Desktop (3 columns) */
+@media (min-width: 1024px) {
+  .matches-grid,
+  .matches-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  .match-card {
+    padding: 0.95rem;
+  }
+
+  .match-thumb {
+    width: 180px;
+    height: 110px;
+  }
+}

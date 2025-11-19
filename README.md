@@ -1,4 +1,4 @@
-# PartyBear's Miscellaneous
+# PartyBear's Miscellaneous V2.0
 
 **PartyBear's Miscellaneous** is a web platform that blends the passion for **football** with the digital culture of modern **brainrots**.  
 Here you’ll find real-time match results, data-based predictions, and the most viral football-related content.
@@ -13,6 +13,8 @@ The main sections include:
 - **Predictions:** smart and interactive football match outcome predictions.  
 - **Brainrots:** the funniest and trendiest memes.  
 - **Landing Page:** a quick introduction to what the project offers.
+- **Matches:** A list of the matches saved on LocalStorage (read).
+- **Manage Matches:** Modify, delete, create your current matches stored on LocalStorage.
 
 ## What did I base this project on?
 
@@ -25,6 +27,39 @@ This is because I used the same structure on the landing page (using left and ri
 ![template](img/template.webp "template")
 
 ---
+
+## What's New (V2.0)
+
+This update introduces a full set of improvements that make the platform smoother, more modern, more interactive, and visually impressive.
+
+### New Features & Improvements
+
+#### New Mobile Menu (Redesigned)
+- Slide-in navigation drawer  
+- Background dimming overlay  
+- Improved accessibility with ARIA attributes
+
+#### Fully Responsive Footer 
+- Better allignment for desktops  
+- Scales icons and text cleanly
+
+#### Parallax Hero Experience
+- High-quality multi-layer parallax (background + text + Mbappé)  
+- Scroll-based animations  
+- Responsive layering to avoid overlap  
+- Optimized transform animations for performance
+
+#### Matches CRUD System
+- Store matches with **localStorage**  
+- Add/edit/delete matches with a dedicated UI  
+- Responsive match grid  
+- Persistent data sync with the browser
+- Quick advice: if you want to reset your localstorage use in the console:
+
+```JavaScript
+   localStorage.clear()
+   ```
+
 
 ## Getting Started
 
@@ -105,7 +140,7 @@ To maintain consistency:
 - Also, AI has been used too for repetitive tasks (Ex. filling out content on the page so I don't waste time.).
 - Thanks to [**UIverse**](https://uiverse.io/) community for giving out CSS code templates! This also helped a lot on this project!
 - Thanks to **BeJob & IBM Python course** for giving out a complete guide for HTML, CSS & JS.
-
+- I also would like to thank TikTok user [**Rubem Frontend**](https://www.tiktok.com/@rubem.frontend) for teaching really cool CSS tricks in less than a minute. This really helped me a lot in the V2.0 version.
 ---
 
 > “Where football analysis meets the chaos of the internet.”  

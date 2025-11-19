@@ -1,51 +1,51 @@
 /* main content layout */
 #content {
-    display: flex;
-    gap: 4vw;
-    width: 100%;
-    max-width: 1200px;
-    margin: 4vh auto;
-    padding: 0 4vw;
-    align-items: flex-start;
-    flex-direction: row;
+  display: flex;
+  gap: 4vw;
+  width: 100%;
+  max-width: 1200px;
+  margin: 4vh auto;
+  padding: 0 4vw;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
 /* left container */
 #container-left {
-    flex: 1.1;
-    min-width: 20rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 250, 252, 0.95));
-    border-radius: 0.8rem;
-    padding: 2rem;
-    box-shadow: 0 8px 24px rgba(12, 18, 24, 0.06);
+  flex: 1.1;
+  min-width: 20rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 250, 252, 0.95));
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(12, 18, 24, 0.06);
 }
 
 /* here i change the h2 style on the */
 #container-left h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 #container-left p {
-    margin-bottom: 1rem;
-    color: #334155;
+  margin-bottom: 1rem;
+  color: #334155;
 }
 
 .features-list {
-    list-style: none;
-    margin-bottom: 1rem;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
 }
 
 .features-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 1rem;
-    color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  color: #0f172a;
 }
 
 .features-list li:hover {
@@ -56,76 +56,76 @@
 
 
 .features-list li i {
-    font-size: 1.2rem;
-    color: #1a73e8;
-    flex-shrink: 0;
+  font-size: 1.2rem;
+  color: #1a73e8;
+  flex-shrink: 0;
 }
 
 /* BUTTON CTA */
 .btn-primary {
-    display: inline-block;
-    padding: 0.7rem 1.2rem;
-    border-radius: 0.6rem;
-    background-color: #1a73e8;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
+  background-color: #1a73e8;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #155bb5;
-    transform: translateY(-0.2rem);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: #155bb5;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* RIGHT CONTAINER */
 #container-right {
-    flex: 0.9;
-    min-width: 18rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+  flex: 0.9;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .intro-image {
-    width: 100%;
-    border-radius: 0.6rem;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 0.6rem;
+  object-fit: cover;
 }
 
 .highlight-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 0.6rem;
-    box-shadow: 0 6px 18px rgba(12, 18, 24, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px rgba(12, 18, 24, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .highlight-card:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 12px 24px rgba(12, 18, 24, 0.1);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 12px 24px rgba(12, 18, 24, 0.1);
 }
 
 .highlight-card i {
-    font-size: 1.4rem;
-    color: #ffb703;
+  font-size: 1.4rem;
+  color: #ffb703;
 }
 
 .highlight-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
 }
 
 .highlight-card p {
-    font-size: 0.92rem;
-    color: #475569;
-    margin: 0;
+  font-size: 0.92rem;
+  color: #475569;
+  margin: 0;
 }
 
 /* ------------- */
@@ -134,70 +134,70 @@
 
 /* Small devices (phones, tablets up to 768px) */
 @media only screen and (max-width: 768px) {
-    #content {
-        flex-direction: column;
-        /* stack left above right */
-        gap: 2.5rem;
-        margin: 3vh auto;
-        padding: 0 5vw;
-    }
+  #content {
+    flex-direction: column;
+    /* stack left above right */
+    gap: 2.5rem;
+    margin: 3vh auto;
+    padding: 0 5vw;
+  }
 
-    #container-left,
-    #container-right {
-        width: 100%;
-    }
+  #container-left,
+  #container-right {
+    width: 100%;
+  }
 
-    .features-list li {
-        font-size: 0.95rem;
-    }
+  .features-list li {
+    font-size: 0.95rem;
+  }
 
-    .highlight-card h3 {
-        font-size: 1rem;
-    }
+  .highlight-card h3 {
+    font-size: 1rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px){
-    #content {
-        flex-direction: column-reverse;
-        /* right arriba, left abajo */
-        gap: 2.5rem;
-        margin: 3vh auto;
-        padding: 0 5vw;
-    }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #content {
+    flex-direction: column-reverse;
+    /* right arriba, left abajo */
+    gap: 2.5rem;
+    margin: 3vh auto;
+    padding: 0 5vw;
+  }
 
-    #container-left,
-    #container-right {
-        width: 100%;
-    }
+  #container-left,
+  #container-right {
+    width: 100%;
+  }
 
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #content {
-        max-width: 1200px;
-        gap: 5vw;
-    }
+  #content {
+    max-width: 1200px;
+    gap: 5vw;
+  }
 
-    #container-left {
-        padding: 2.5rem;
-    }
+  #container-left {
+    padding: 2.5rem;
+  }
 
-    #container-right {
-        gap: 1.5rem;
-    }
+  #container-right {
+    gap: 1.5rem;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    #content {
-        max-width: 1400px;
-        gap: 6vw;
-    }
+  #content {
+    max-width: 1400px;
+    gap: 6vw;
+  }
 
-    #container-left h2 {
-        font-size: 1.85rem;
-    }
+  #container-left h2 {
+    font-size: 1.85rem;
+  }
 }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion | PartyBear's Miscellaneous</title>
+  <link rel="icon" type="img/x-icon" href="/img/manage-matches-favicon.png">
+
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/containers.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <link rel="stylesheet" href="css/manage-matches.css">
+
+  <!-- library for the icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="brand">
+      <div class="brand-logo">PB</div>
+      <h1 class="brand-title">PartyBear's Miscellaneous</h1>
+    </div>
+
+    <nav id="navigation-menu" aria-hidden="true" aria-label="main-menu">
+      <a href="index.html">Inicio</a>
+      <a href="predictions.html">Predicciones</a>
+      <a href="matches.html">Partidos</a>
+      <a href="manage-matches.html">Gestion</a>
+      <a href="brainrots.html">Brainrots</a>
+    </nav>
+
+    <button id="menu-toggle" aria-expanded="false" aria-controls="navigation-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div id="menu-overlay" aria-hidden="true"></div>
+  </header>
+
+  <div id="container">
+    <main id="content">
+      <section class="form-section">
+        <h2>Añadir / Editar partido</h2>
+
+        <form id="match-form" novalidate>
+          <div class="form-row">
+            <label for="team-home">Equipo local</label>
+            <input id="team-home" name="team-home" type="text" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <label for="team-away">Equipo visitante</label>
+            <input id="team-away" name="team-away" type="text" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <label for="match-date">Fecha y hora</label>
+            <input id="match-date" name="match-date" type="datetime-local">
+          </div>
+
+          <div class="form-row">
+            <label for="match-result">Resultado</label>
+            <input id="match-result" name="match-result" type="text" placeholder="Ej: 2 - 1">
+          </div>
+
+
+          <div class="form-row">
+            <label for="competition">Competición</label>
+            <input id="competition" name="competition" type="text" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <label for="image-url">Imagen (opcional)</label>
+            <input id="image-url" name="image-url" type="url" placeholder="https://...">
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="save-btn" class="btn-primary">Guardar</button>
+            <button type="button" id="cancel-btn" class="btn-ghost">Cancelar</button>
+          </div>
+
+          <div id="form-errors" class="form-errors" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>Partidos guardados</h2>
+        <div id="matches-list" class="matches-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 PartyBear's Miscellaneous. Todos los derechos reservados.</p>
+
+      <div class="footer-logos">
+        <img src="img/six-seven-no-bg.webp" alt="six-seven" class="footer-logo">
+        <img src="img/ucl-footer.webp" alt="ucl-ball" class="footer-logo">
+        <img src="img/cup-footer.png" alt="football-cup" class="footer-logo">
+      </div>
+
+      <nav class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="predictions.html">Predicciones</a>
+        <a href="matches.html">Partidos</a>
+        <a href="manage-matches.html">Gestionar Partidos</a>
+        <a href="brainrots.html">Brainrots</a>
+        <a href="https://github.com/partybearcode" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="js/manage-matches.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>
