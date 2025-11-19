@@ -28,6 +28,7 @@ class MatchManager {
     this.errorsBox = document.getElementById("form-errors");
     this.matchesList = document.getElementById("matches-list");
     this.yearSpan = document.getElementById("current-year-manage");
+    this.inputHighlight = document.getElementById("highlight-match");
   }
 
   // Attaches click events to the Save and Cancel buttons.
@@ -312,7 +313,8 @@ class MatchManager {
       matchDate: this.inputMatchDate.value,
       competition: this.inputCompetition.value.trim(),
       result: (this.inputMatchResult && this.inputMatchResult.value.trim()) || "",
-      imageUrl: this.inputImageUrl.value.trim() || this.generatePlaceholder()
+      imageUrl: this.inputImageUrl.value.trim() || this.generatePlaceholder(),
+      highlight: this.inputHighlight.checked
     };
 
     //Add or update
@@ -345,7 +347,9 @@ class MatchManager {
 
     this.matches.forEach((match, index) => {
       let card = document.createElement("div");
-      card.className = "match-card";
+      if (match.highlight) card.classList.add("highlighted");
+      
+      card.classList.add("match-card");
       card.innerHTML = `
         <div class="match-thumb"><img src="${this.escapeHtml(match.imageUrl)}" alt="${this.escapeHtml(match.teamHome)} vs ${this.escapeHtml(match.teamAway)}"></div>
         <div class="match-meta">
@@ -385,6 +389,7 @@ class MatchManager {
     this.editIndex = index;
     this.inputTeamHome.focus();
     this.formElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    this.inputHighlight.checked = !!match.highlight;
   }
 
   // Deletes a match after confirmation.
@@ -401,6 +406,7 @@ class MatchManager {
     this.formElement.reset();
     this.editIndex = null;
     this.errorsBox.textContent = "";
+    this.inputHighlight.checked = false;
   }
 
   // Generates a fallback placeholder image.

@@ -6,32 +6,32 @@
  * which helps create a sense of depth.
  */
 function applyParallaxEffect() {
-    // We only need to calculate window.scrollY once per frame
-    let scrollY = window.scrollY;
+  // We only need to calculate window.scrollY once per frame
+  let scrollY = window.scrollY;
 
-    // We obtain all necessary elements
-    let bg = document.querySelector(".stadium-layer img");
-    let text = document.querySelector(".parallax-text");
-    let playerLayer = document.querySelector(".player-layer");
+  // We obtain all necessary elements
+  let bg = document.querySelector(".stadium-layer img");
+  let text = document.querySelector(".parallax-text");
+  let playerLayer = document.querySelector(".player-layer");
 
-    // Verify if all elements exist before attempting to manipulate them
-    if (!bg || !text || !playerLayer) {
-        return; 
-    }
+  // Verify if all elements exist before attempting to manipulate them
+  if (!bg || !text || !playerLayer) {
+    return;
+  }
 
-    //Parallax logic
+  //Parallax logic
 
-    // 1. background (Stadium): Moves slower to simulate distance (background effect).
-    // Multiplier: 0.2
-    bg.style.transform = `translateY(${scrollY * 0.2}px)`;
+  // 1. background (Stadium): Moves slower to simulate distance (background effect).
+  // Multiplier: 0.2
+  bg.style.transform = `translateY(${scrollY * 0.2}px)`;
 
-    // 2. Text (Matches): Moves faster (simulating foreground) and uses its original X transform. Multiplier: 0.8
-    // Use translate3d to promote hardware acceleration
-    text.style.transform = `translateX(-50%) translate3d(0, ${scrollY * 0.8}px, 0)`;
+  // 2. Text (Matches): Moves faster (simulating foreground) and uses its original X transform. Multiplier: 0.8
+  // Use translate3d to promote hardware acceleration
+  text.style.transform = `translateX(-50%) translate3d(0, ${scrollY * 0.8}px, 0)`;
 
-    //3. Player Layer (Mbappe): Moves at an intermediate speed (0.25)
-    // Stays in the "foreground" visually thanks to z-index in CSS.
-    playerLayer.style.transform = `translateX(-50%) translate3d(0, ${scrollY * 0.25}px, 0)`;
+  //3. Player Layer (Mbappe): Moves at an intermediate speed (0.25)
+  // Stays in the "foreground" visually thanks to z-index in CSS.
+  playerLayer.style.transform = `translateX(-50%) translate3d(0, ${scrollY * 0.25}px, 0)`;
 }
 
 // Listen for the scroll event and apply the effect

@@ -75,7 +75,8 @@ function normalizeMatch(raw) {
     matchDate: m.matchDate || m.date || m.datetime || "",
     competition: m.competition || m.competitionName || m.competition_name || "",
     result: m.result || m.score || m.matchResult || "",
-    imageUrl: m.imageUrl || m.image || m.img || ""
+    imageUrl: m.imageUrl || m.image || m.img || "",
+     highlight: !!m.highlight
   };
 }
 
@@ -317,8 +318,7 @@ function renderMatchesGrid() {
       : `https://picsum.photos/400/200?random=${Math.floor(Math.random() * 1000)}`;
 
     let card = document.createElement("div");
-    card.className = "match-card";
-
+    card.className = "match-card" + (match.highlight ? " highlighted" : "");
     card.innerHTML = `
       <div class="match-thumb">
         <img src="${imageUrl}" alt="${escapeHtml(match.teamHome)} vs ${escapeHtml(match.teamAway)}">

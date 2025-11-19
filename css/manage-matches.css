@@ -42,6 +42,13 @@
   border-radius: 0.6rem;
   box-shadow: 0 6px 18px rgba(12,18,24,0.04);
 }
+
+.match-card.highlighted {
+  background: rgba(255, 230, 0, 0.25); /* amarillo suave */
+  border-left: 6px solid #ffd000;      /* borde amarillo más fuerte */
+  transition: 0.25s ease-in-out;
+}
+
 .match-thumb {
   width: 110px;
   height: 70px;
